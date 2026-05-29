@@ -46,7 +46,8 @@ public class Book extends Publication{
     @Override
     public String toString() {
         return "Book{" +
-                "ISBN='" + ISBN + '\'' +
+                super.toString() +
+                ", ISBN='" + ISBN + '\'' +
                 '}';
     }
 }
