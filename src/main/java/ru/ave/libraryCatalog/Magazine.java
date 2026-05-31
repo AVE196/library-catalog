@@ -18,7 +18,7 @@ public class Magazine extends Publication{
 
     @Override
     public void printDetails() {
-        System.out.printf("%s: название - %s, автор - %s, год выпуска - %d, issue number - %d"
+        System.out.printf("%s: название - %s, автор - %s, год выпуска - %d, issue number - %d\n"
                 , getType(), getTitle(), getAuthor(), getYear(), getIssueNumber());
     }
 

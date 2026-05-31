@@ -30,7 +30,7 @@ public class Library {
             System.out.println("Библиотека пуста");
         } else {
             for (Publication pub : publications) {
-                System.out.println(pub);
+                pub.printDetails();
             }
         }
     }

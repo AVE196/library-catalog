@@ -36,20 +36,25 @@ public class Main {
                         System.out.print("Введите автора: ");
                         String author = scan.nextLine();
                         System.out.print("Введите год: ");
-                        int year = scan.nextInt();
-                        switch (typePublication) {
-                            case "1":
-                                System.out.print("Введите ISBN: ");
-                                lib.addPublication(new Book(title, author, year, scan.nextLine()));
-                                break;
-                            case "2":
-                                System.out.print("Введите issueNumber: ");
-                                lib.addPublication(new Magazine(title, author, year, scan.nextInt()));
-                                break;
-                            case "3":
-                                System.out.print("Введите день публикации: ");
-                                lib.addPublication(new Newspaper(title, author, year, scan.nextLine()));
-                                break;
+                        try {
+                            int year = Integer.parseInt(scan.nextLine());
+                            switch (typePublication) {
+                                case "1":
+                                    System.out.print("Введите ISBN: ");
+                                    lib.addPublication(new Book(title, author, year, scan.nextLine()));
+                                    break;
+                                case "2":
+                                    System.out.print("Введите issueNumber: ");
+                                    lib.addPublication(new Magazine(title, author, year, Integer.parseInt(scan.nextLine())));
+                                    break;
+                                case "3":
+                                    System.out.print("Введите день публикации: ");
+                                    lib.addPublication(new Newspaper(title, author, year, scan.nextLine()));
+                                    break;
+                            }
+                        } catch (Exception e) {
+                            System.out.println(errorMessage);
+                            break;
                         }
                     } else {
                         System.out.println(errorMessage);
@@ -73,11 +78,6 @@ public class Main {
                     System.out.println(errorMessage);
                     break;
             }
-
-
-
         } while (!isExit);
-
     }
-
 }

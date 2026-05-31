@@ -26,7 +26,7 @@ public class Newspaper extends Publication{
 
     @Override
     public void printDetails() {
-        System.out.printf("%s: название - %s, автор - %s, год выпуска - %d, день публикации - %s"
+        System.out.printf("%s: название - %s, автор - %s, год выпуска - %d, день публикации - %s\n"
                 , getType(), getTitle(), getAuthor(), getYear(), getPublicationDay());
     }
 

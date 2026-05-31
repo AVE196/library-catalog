@@ -18,7 +18,7 @@ public class Book extends Publication{
 
     @Override
     public void printDetails() {
-        System.out.printf("%s: название - %s, автор - %s, год выпуска - %d, ISBN - %s"
+        System.out.printf("%s: название - %s, автор - %s, год выпуска - %d, ISBN - %s\n"
                 , getType(), getTitle(), getAuthor(), getYear(), getISBN());
     }
 
